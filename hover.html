@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#0f4675,#0f4675 50%,#fff 50%, #fff 100%);
+   }
+   .container{
+    display: flex;
+    width: 1100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   }
+   .container .box{
+    position: relative;
+    width: 320px;
+    background: #fff;
+    padding: 100px 40px 60px;
+    box-shadow: 0 15px 45px rebeccapurple;
+   }
+   .container .box:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff226d;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.9s;
+   }
+   .container .box:hover:before{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.9s;
+   }
+
+   .container .box h2{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    font-size: 4em;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 0.1s;
+    transition: 0.5s;
+   }
+   .container .box:hover h2{
+    opacity: 1;
+    color: white;
+    transform: translateY(-40px);
+   }
+   .container .box h3{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #333;
+    transition: 0.3s;
+   }
+   .container .box p{
+    position: relative;
+    z-index: 2;
+    color: #555;
+    transition: 0.5s;
+
+   }
+   .container .box:hover h3,
+   .container .box:hover p{
+    color: #fff;
+   }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>01</h2>
+            <h3>Servion one</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quas odio ipsa rem corporis, a cum necessitatibus id repellendus, libero excepturi illum dicta ratione tenetur eaque blanditiis sint accusantium esse?</p>
+        </div>
+        <div class="box">
+            <h2>02</h2>
+            <h3>Servion two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quas odio ipsa rem corporis, a cum necessitatibus id repellendus, libero excepturi illum dicta ratione tenetur eaque blanditiis sint accusantium esse?</p>
+        </div>
+        <div class="box">
+            <h2>03</h2>
+            <h3>Servion three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quas odio ipsa rem corporis, a cum necessitatibus id repellendus, libero excepturi illum dicta ratione tenetur eaque blanditiis sint accusantium esse?</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .form{
+    width: 250px;
+    height: 260px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgb(0, 0, 0,0.5)50%);
+    position: absolute;
+    top: 20px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 25px;
+}
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(40, 108, 158);
+    font-size: 22px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid orangered none none none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input::placeholder{
+    color: white;
+    font-family: Arial;
+}
+.form button{
+    width: 75px;
+    height: 40px;
+    background: rgb(22, 112, 148);
+    border: none;
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+</style>
+<body>
+    <div class="form">
+        <h2>ETEC</h2>
+        <input type="email" placeholder="Enter Email Here">
+        <input type="password" placeholder="Enter  pasword">
+        <button class="button">login</button>
+        <button class="button">sign in</button>
+        <button class="button">signout</button>
+    </div>
+</body>
+</html>

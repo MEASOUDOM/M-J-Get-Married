@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pink:#ffafcc;
+}
+body{
+    position: relative;
+    background-color: white;
+    font-family: 'Great Vibes';
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgb(155, 144, 129);
+    transition: 1s;
+    z-index: 1300;
+}
+header.active{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+.logo{
+    font-family: 'Great Vibes';
+    font-size: 40px;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+.menu{
+    color: black;
+    font-size: 2em;
+    transition: 0.5s;
+
+}
+.nav{
+    display: flex;
+
+}
+
+.nav li{
+    list-style: none;
+    margin: 0 20px;
+
+}
+
+.nav li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 300;
+    padding: 10px;
+    font-family: 'Raleway';
+
+}
+.nav li a:hover,
+.nav li a:active
+{
+color: var(--pink);
+}
+.search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    transition: 0.5s;
+}
+.search  input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 0 10px 0 15px;
+
+}
+.search input::placeholder{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 350;
+
+}
+.search i{
+    font-size: 1.4em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    padding-left: 10px;
+    color: black;
+    cursor: pointer;
+    border-left: 1px solid black;
+
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    transition: 0.5s;
+}
+
+.banner:hover{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #cdb4db;
+
+}
+.bg-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   overflow: hidden;
+}
+.bg-slide .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : scale(0) translate(-50%, -50%);
+    width: 60vw;
+    z-index: 1100;
+    transition: ease-in-out 3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.bg-slide .content h1{
+    font-size: 6em;
+    text-transform: uppercase;
+}
+.bg-slide .content p{
+    font-family: 'Great Vibes';
+    font-size: 1.5em;
+    font-weight: 200;
+    letter-spacing: 1px;
+
+}
+.bg-slide.active .content {
+    transform : scale(1) translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+}
+.circle{
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    transform: translate(0,0) rotateZ(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s;
+} 
+.circle.bg{
+    background: transparent;
+    width: 140vw;
+   height: 140vw;
+   border-radius: 0; 
+}
+.circle.large{
+    width: 70vw;
+    height: 70vw;
+
+}
+.circle.small{
+    width: 35vw;
+    height: 35vw;
+} 
+.circle img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.circle.bg img{
+    border-radius: 0;
+}
+.circle.large img{
+    transform: scale(2);
+}
+.circle.small img{
+    transform: scale(4);
+}
+.bg-slide.active .circle.bg{
+    transform: translate(0,0) rotateZ(-360deg);
+    opacity: 1;
+    visibility: visible;
+}
+.bg-slide.active .circle.large{
+    transform: translate(0,0) rotateZ(320deg);
+    opacity: 1;
+    visibility: visible;
+}
+.bg-slide.active .circle.small{
+    transform: translate(0,0) rotateZ(-320deg);
+    opacity: 1;
+    visibility: visible;
+}
+
